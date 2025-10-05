@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Sistema de Cadastro de Usuário</h1>
+    <div>
+        <a href="register.html">Cadastrar Usuário</a>
+    </div>
+
+    <h1>LISTA DE USUÁRIOS CADASTRADOS NO BANCO DE DADOS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+</body>
+</html>
